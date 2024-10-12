@@ -58,6 +58,9 @@ p {
   text-align: left;
   margin-bottom: 0rem;
 }
+.contact {
+  text-align: left;
+}
 @media (max-width: 768px) {
   .resume {
     flex-direction: column;
