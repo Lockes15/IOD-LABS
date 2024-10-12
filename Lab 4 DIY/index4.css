@@ -51,6 +51,13 @@ ul {
   margin-bottom: 0rem;
   color: #333;
 }
+p {
+  text-align: end;
+}
+.profile {
+  text-align: left;
+  margin-bottom: 0rem;
+}
 @media (max-width: 768px) {
   .resume {
     flex-direction: column;
