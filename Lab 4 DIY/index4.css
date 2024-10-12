@@ -32,13 +32,13 @@ header {
 }
 .left-column {
   flex: 1;
-  padding: 2rem;
+  padding: 3rem;
   background: #e6f2ef;
   margin-right: 1rem;
 }
 .right-column {
   flex: 2;
-  padding: 2rem;
+  padding: 3rem;
   background: lightgray;
   border: 1px solid #ddd;
 }
@@ -50,4 +50,20 @@ p,
 ul {
   margin-bottom: 0rem;
   color: #333;
+}
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-column,
+  .right-column {
+    margin-right: 0;
+    padding: 1rem;
+  }
+
+  .left-column {
+    margin-bottom: 1rem;
+  }
 }
