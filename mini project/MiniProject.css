@@ -1,0 +1,115 @@
+body {
+  font-family: Merriweather, Arial, sans-serif;
+  background-color: aliceblue;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #4682b4;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.input-selection {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 7px; /* slightly rounded corners*/
+  box-shadow: 0 2px 4px rgba(0.5, 0.5, 0.5, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+label {
+  display: block;
+  height: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#category-select,
+#amount-input,
+#date-input,
+#add-button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4682b4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a9bd4; /*hover- change color */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* otherwise theres an ugly gap */
+
+  max-width: 100%; /* Ensure table doesn't overflow */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: #4682b4;
+  color: white;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+tfoot td#total-amount {
+  text-align: right;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  form,
+  table {
+    padding: 0.5rem;
+  }
+
+  input,
+  select,
+  button {
+    padding: 0.4rem;
+  }
+
+  th,
+  td {
+    padding: 0.4rem;
+  }
+}
