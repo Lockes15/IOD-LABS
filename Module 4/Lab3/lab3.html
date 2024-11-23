@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="lab3.css">
+</head>
+
+<body>
+    <input type="number" id="number1" placeholder="Enter first number">
+    <input type="number" id="number2" placeholder="Enter second number">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="reset()">Reset</button>
+    <div id="result"></div>
+
+    <script src="lab3.js"></script>
+</body>
+
+</html>

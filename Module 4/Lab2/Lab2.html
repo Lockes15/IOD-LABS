@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #card-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-weight: 700;
+            font-size: 1.5em;
+            margin: 16px;
+            color: #333;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .artist-info {
+            font-size: 0.9em;
+            color: #666;
+            margin: 0 16px 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <template id="card-template">
+        <div class="card">
+            <img class="card-image" src="" alt="Artwork">
+            <div class="card-body">
+                <div class="card-title"></div>
+                <div class="artist-info"></div>
+            </div>
+        </div>
+    </template>
+
+    <div id="card-list"></div>
+
+    <script>
+        const artists = [
+            {
+                name: "Van Gogh",
+                age: 37,
+                location: "Netherlands",
+                bio: "A Dutch post-impressionist painter who is among the most famous and influential figures in Western art.",
+                portfolio: [
+                    { title: "Portrait", url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image" },
+                    { title: "Sky", url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg" }
+                ]
+            },
+            {
+                name: "Pablo Picasso",
+                age: 91,
+                location: "Spain",
+                bio: "A Spanish painter, sculptor, printmaker, ceramicist and theatre designer who spent most of his adult life in France.",
+                portfolio: [
+                    { title: "Guernica", url: "https://static.wixstatic.com/media/ed3579_c84c910829bb49248ec778b9f0702793~mv2.jpg/v1/fit/w_1000,h_729,al_c,q_80/file.jpg" },
+                    { title: "The Weeping Woman", url: "https://th.bing.com/th/id/R.37ea5c900a8180be8499af5b5381c3ef?rik=w4kocISwU7ozTg&riu=http%3a%2f%2fayay.co.uk%2fbackgrounds%2fpaintings%2fpablo_picasso%2fweeping-woman-1937.jpg&ehk=kT4VJsWSxGjmuhlbdxk78m%2bvWfBpP1L7mIG07%2bY%2bJKI%3d&risl=&pid=ImgRaw&r=0" }
+                ]
+            },
+            {
+                name: "Claude Monet",
+                age: 86,
+                location: "France",
+                bio: "A founder of French Impressionist painting, and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature.",
+                portfolio: [
+                    { title: "Water Lilies", url: "https://th.bing.com/th/id/R.464c8bf9600b29660191e9a8d8118230?rik=IUzw5FlHtmVUuQ&riu=http%3a%2f%2fuploads7.wikiart.org%2fimages%2fclaude-monet%2fwater-lilies-14.jpg&ehk=ZG%2bSuKEZ%2f6C4lzWcbeeNLzXUfHlHNc8x6epPSpy3nvk%3d&risl=&pid=ImgRaw&r=0" },
+                    { title: "Impression, Sunrise", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/300px-Monet_-_Impression%2C_Sunrise.jpg" }
+                ]
+            }
+        ];
+
+        function addCard(title, imageUrl, artistInfo) {
+            const template = document.getElementById("card-template").content.cloneNode(true);
+            template.querySelector('.card-title').innerText = title;
+            template.querySelector('.card-image').src = imageUrl;
+            template.querySelector('.artist-info').innerText = artistInfo;
+            document.querySelector('#card-list').appendChild(template);
+        }
+
+        artists.forEach(artist => {
+            artist.portfolio.forEach(artwork => {
+                const artistInfo = `${artist.name}, Age: ${artist.age}, Location: ${artist.location}\nBio: ${artist.bio}`;
+                addCard(artwork.title, artwork.url, artistInfo);
+            });
+        });
+    </script>
+</body>
+
+</html>

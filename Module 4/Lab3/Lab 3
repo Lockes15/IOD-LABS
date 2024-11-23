@@ -1,0 +1,9 @@
+
+a) Get data (two numbers):
+• Input fields for the user to enter two numbers.
+b) Choose an operator:
+• Options for the user to select an operator (e.g., addition, subtraction, multiplication, division).
+c) Get the result:
+• A button to calculate and display the result based on the chosen operator and input numbers.
+d) Reset the screen:
+A button to clear the input fields and reset the application.
