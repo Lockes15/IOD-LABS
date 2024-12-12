@@ -1,0 +1,109 @@
+/*I Selectors & Combinators */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+.style-me1 {
+  color: red;
+}
+#style-me2 {
+  color: blue;
+}
+p.style-me1#style-me2 {
+  color: purple;
+}
+.my-descendants-are-styled p {
+  background-color: red;
+}
+.my-children-are-styled > p {
+  background-color: lightgreen;
+}
+* {
+  box-sizing: border-box;
+}
+/*II box model & common properties */
+.box {
+  margin: 40px 50px 40px 50px;
+  padding: 100px 50px;
+  width: 1250px;
+  height: 300px !important;
+  border: 10px solid lightcoral;
+  overflow: auto;
+  outline: 5px solid lightskyblue;
+  border-radius: 5% 30px;
+  background-image: url("Images/lab2image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* III positioning */
+.position-absolute {
+  position: absolute;
+  top: 0px;
+  left: 900px;
+  right: 50px;
+  background-color: mediumorchid;
+}
+.position-relative {
+  position: relative;
+  background-color: sandybrown;
+}
+.position-sticky {
+  position: sticky;
+  background-color: slateblue;
+  top: 0;
+}
+/* IV styling txt */
+.text-style {
+  color: darkslategrey;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: "Merriweather";
+  text-align: center;
+  letter-spacing: unset;
+  word-spacing: unset;
+  text-transform: uppercase;
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+/* V styling links */
+a:link {
+  color: palevioletred;
+  font-size: 16px;
+  font-weight: 50;
+  text-decoration: underline;
+}
+a:hover {
+  color: darkorange;
+  text-decoration: line-through;
+}
+a:active {
+  color: darkblue;
+  text-decoration-line: overline;
+}
+a:focus {
+  color: darkred;
+  text-decoration: dotted;
+}
+a:visited {
+  color: lightseagreen;
+}
+/*VI calc  */
+.calc-style {
+  width: calc(100vw - 100px);
+  background-color: lightpink; /* Add a background color to see the boundaries */
+}
+
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+  background-color: lightyellow;
+}
+
+.fluid-col {
+  display: inline-block;
+  width: calc(100% - 350px);
+  background-color: lightblue;
+}

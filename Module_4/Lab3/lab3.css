@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  flex-direction: column;
+  /* Added to make the layout vertical */
+}
+
+.calculator {
+  background-color: #d9d9d9;
+  padding: 30px;
+  /* Increased padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  /* Slightly increased shadow for better effect */
+  text-align: center;
+  width: 300px;
+  /* Fixed width for a more central look */
+}
+
+input,
+select,
+button {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #668ff8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #668ff8;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Updates</title>
+    <link rel="stylesheet" href="lab5.css">
+</head>
+
+<body>
+    <div class="news-container" id="newsContainer"></div>
+
+    <div class="form-container">
+        <div class="form-field">
+            <label for="newsTitle">Title:</label>
+            <input type="text" id="newsTitle">
+        </div>
+        <div class="form-field">
+            <label for="newsContent">Content:</label>
+            <input type="text" id="newsContent">
+        </div>
+        <button onclick="addNews()">Submit News</button>
+        <button onclick="stopUpdates()">Stop Updates</button>
+        <button onclick="startUpdates()">Start Updates</button>
+    </div>
+
+    <script src="lab5.js"></script>
+</body>
+
+</html>
